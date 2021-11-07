@@ -5,10 +5,10 @@ const swagger = require("./swagger.js")
 
 
 var mysqlConnection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'EmployeeDB'
+    host     : 'us-cdbr-east-04.cleardb.com',
+    user     : 'be64994554cede',
+    password : '77fb5c98',
+    database : 'heroku_7b0fe73229af126'
 });
 
 mysqlConnection.connect((err) => {
