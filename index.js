@@ -3,6 +3,7 @@ var express = require('express');
 var app= express();
 const swagger = require("./swagger.js")
 
+require('dotenv').config()
 
 var mysqlConnection = mysql.createConnection({
     host     : 'us-cdbr-east-04.cleardb.com',
@@ -30,5 +31,5 @@ const employeeRoutes = require("./api/routes/employeeRoutes");
 //Call Students Routes
 employeeRoutes(app, mysqlConnection);
 
-app.listen(3000, () => console.log('Express server is runnig at port no : 3000'));
+app.listen(process.env.PORT || 3000, () => console.log('Express server is runnig at port no : 3000'));
 
